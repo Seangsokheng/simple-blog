@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif /*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+}
+.thom{
+  font-weight: bolder;
+}
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif , Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+}
+.text-body-emphasis {
+  --bs-text-opacity: 1;
+  color: var(--bs-emphasis-color) !important;
+}
+ .text-decoration-none {
+  text-decoration: none !important;
+} 
+.blog-posts {
+  display: flex;
+  flex-wrap: wrap;  /* Allow posts to wrap onto multiple lines */
+  margin: 0 -20px;   /* Remove horizontal margin from each post */
+}
+
+.blog-post {
+  width: calc(33.33% - 40px);  /* Adjust width as needed (considering margins) */
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.blog-post h1 {
+  font-size: 1.5em;  /* Adjust heading size */
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  margin-bottom: 10px;
+}
+
+.blog-post a {
+  text-decoration: none;
+  color: #333;
+}
+
+.blog-post a:hover {
+  color: #000;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;  /* Align actions to opposite ends */
+  margin-top: 10px;
+}
+
+.post-actions a, .post-actions button {
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.post-actions a:hover, .post-actions button:hover {
+  color: #333;
+}
+.my-custom-primary {
+  background-color: #007bff;  /* Primary Blue */
+  border-color: #007bff;
+}
+
+.my-custom-danger {
+  background-color: #dc3545;  /* Danger Red */
+  border-color: #dc3545;
+}
+@media (max-width: 767px) {
+  .blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .blog-post {
+    flex: 1; /* Allows elements to grow and shrink proportionally */
+    flex-basis: calc(50% - (2 * 20px)); /* Assuming 20px margin on both sides */
+
+  }
+}
+@media (max-width: 424px) {
+  .blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .blog-post {
+    flex-basis: 50%;
+  flex-grow: 1;
+  }
+}
+
+
+.edit-form {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  border-color: #ddd;
+  border-radius: 4px;
+  /* Add custom styles for input/textarea background color */
+}
+
+.custom-select {
+  background-color: #f0f8ff; /* Light blue */
+  border-color: #dee2e6; /* Light border */
+  /* Add custom styles for select element */
+}
+.blog-post {
+  max-width: 500px; /* Adjust the value as needed */
+}
+.blog-post p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show two lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.custom-btn {
+  background-color: #388e3c; /* Green */
+  border-color: #388e3c; /* Green */
+  /* Add custom hover effects if needed */
+}
+

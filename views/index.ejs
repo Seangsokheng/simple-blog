@@ -1,0 +1,25 @@
+  <%- include("partials/header"),{
+     categorys
+  } -%>  
+  <div class="container"> 
+    <div class="blog-posts">
+      <% posts.forEach(post => { %>
+        <article class="blog-post">
+          <h1 class="title"><%= post.title %></h1>
+          <p>Category: <%= post.category %></p>
+          <p><%= post.content.substring(0, 100) + " ..." %></p>
+          <a href="/posts/<%= post.id %>">Read More</a>
+    
+          <div class="post-actions">
+            <a href="/edit/<%= post.id %>" class="btn my-custom-primary">Edit</a>
+            <form action="/delete/<%= post.id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this post?')">
+              <button type="submit" class="btn my-custom-danger">Delete</button>
+            </form>
+          </div>
+        </article>
+      <% });%>
+    </div>    
+  </div> 
+    
+    
+    <%- include("partials/footer") -%>   
